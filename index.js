@@ -302,7 +302,7 @@ const addressing = (doc, position, invoice, options) => {
     // dane sprzedawcy
     const seller_lines = [
         `${invoice.seller.company}`,
-        `ul. ${invoice.seller.address.street}`,
+        `${invoice.seller.address.street}`,
         `${invoice.seller.address.zipcode} ${invoice.seller.address.city}, ${invoice.seller.address.country}`,
         `NIP: ${invoice.seller.nip}`,
     ];
@@ -311,7 +311,7 @@ const addressing = (doc, position, invoice, options) => {
     // dane nabywcy
     const buyer_lines = [
         `${invoice.buyer.company}`,
-        `ul. ${invoice.buyer.address.street}`,
+        `${invoice.buyer.address.street}`,
         `${invoice.buyer.address.zipcode} ${invoice.buyer.address.city}, ${invoice.buyer.address.country}`,
         `NIP: ${stripLeft(invoice.buyer.nip, options.stripBuyerCountry || 'PL')}`,
     ];
